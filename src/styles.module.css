@@ -1,0 +1,10 @@
+/* Add your CSS here. This file should */
+/* automatically hot reload into the app on save */
+
+.instructions {
+	position: relative;
+    margin: 0 auto;
+	text-align: center;
+	top: 30px;
+    width: 1000px;
+}

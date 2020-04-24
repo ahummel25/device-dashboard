@@ -1,0 +1,3 @@
+{
+  "presets": ["@babel/preset-react", "react-hot-loader/babel"]
+}
