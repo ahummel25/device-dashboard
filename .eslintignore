@@ -1,0 +1,8 @@
+# Ignore mocks
+__mocks__/*
+
+# Ignore node_modules
+node_modules
+
+# Ignore webpack
+webpack.config.js

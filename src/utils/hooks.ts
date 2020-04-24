@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
+import fetch from 'isomorphic-fetch';
 
 import { BASE_API } from '../services/api';
 import { IDevicesResponse } from '../types';
 
-export const useGetDevices = (devicesUpdated): IDevicesResponse | null => {
+export const useGetDevices = (
+  devicesUpdated: boolean
+): IDevicesResponse | null => {
   const [
     devicesResponse,
     setDevicesResponse

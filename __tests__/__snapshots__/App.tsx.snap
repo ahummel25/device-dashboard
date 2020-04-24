@@ -1,0 +1,1140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App.tsx matches snapshot 1`] = `
+<div
+  class="instructions"
+>
+  <h1>
+    Relayr Device Dashboard
+  </h1>
+  <div
+    style="max-width: 100%; padding-bottom: 50px;"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
+      style="position: relative;"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-regular MTableToolbar-root-229 MuiToolbar-gutters"
+      >
+        <div
+          class="MTableToolbar-title-233"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-h6"
+            style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
+          >
+            Devices
+          </h6>
+        </div>
+        <div
+          class="MTableToolbar-spacer-231"
+        />
+        <div
+          class="MuiFormControl-root MuiTextField-root MTableToolbar-searchField-234"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd"
+          >
+            <div
+              class="MuiInputAdornment-root MuiInputAdornment-positionStart"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                focusable="false"
+                title="Search"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                />
+              </svg>
+            </div>
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd"
+              placeholder="Search"
+              type="text"
+              value=""
+            />
+            <div
+              class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+            >
+              <button
+                class="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+                disabled=""
+                tabindex="-1"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MTableToolbar-actions-232"
+        >
+          <div>
+            <div>
+              <span />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Component-horizontalScrollContainer-346"
+        style="overflow-x: auto; position: relative;"
+      >
+        <div>
+          <div
+            style="overflow-y: auto;"
+          >
+            <div>
+              <table
+                class="MuiTable-root"
+                style="table-layout: auto;"
+              >
+                <thead
+                  class="MuiTableHead-root"
+                >
+                  <tr
+                    class="MuiTableRow-root MuiTableRow-head"
+                  >
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MTableHeader-header-349 MuiTableCell-paddingCheckbox"
+                      scope="col"
+                      style="width: 48px; text-align: center; box-sizing: border-box;"
+                    >
+                      <span
+                        aria-disabled="true"
+                        class="MuiButtonBase-root MuiTableSortLabel-root Mui-disabled"
+                        role="button"
+                        tabindex="-1"
+                      >
+                        Actions
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+                          />
+                        </svg>
+                      </span>
+                    </th>
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MTableHeader-header-349 MuiTableCell-alignLeft"
+                      scope="col"
+                      style="box-sizing: border-box;"
+                    >
+                      <span
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiTableSortLabel-root"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          aria-roledescription="Draggable item. Press space bar to lift"
+                          data-react-beautiful-dnd-drag-handle="1"
+                          data-react-beautiful-dnd-draggable="1"
+                          draggable="false"
+                          tabindex="0"
+                        >
+                          Name
+                        </div>
+                        <span
+                          aria-hidden="true"
+                          class="material-icons MuiIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                        >
+                          arrow_downward
+                        </span>
+                      </span>
+                    </th>
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MTableHeader-header-349 MuiTableCell-alignLeft"
+                      scope="col"
+                      style="box-sizing: border-box;"
+                    >
+                      <span
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiTableSortLabel-root"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          aria-roledescription="Draggable item. Press space bar to lift"
+                          data-react-beautiful-dnd-drag-handle="1"
+                          data-react-beautiful-dnd-draggable="1"
+                          draggable="false"
+                          tabindex="0"
+                        >
+                          Unit
+                        </div>
+                        <span
+                          aria-hidden="true"
+                          class="material-icons MuiIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                        >
+                          arrow_downward
+                        </span>
+                      </span>
+                    </th>
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MTableHeader-header-349 MuiTableCell-alignRight"
+                      scope="col"
+                      style="box-sizing: border-box;"
+                    >
+                      <span
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiTableSortLabel-root"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          aria-roledescription="Draggable item. Press space bar to lift"
+                          data-react-beautiful-dnd-drag-handle="1"
+                          data-react-beautiful-dnd-draggable="1"
+                          draggable="false"
+                          tabindex="0"
+                        >
+                          Value
+                        </div>
+                        <span
+                          aria-hidden="true"
+                          class="material-icons MuiIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                        >
+                          arrow_downward
+                        </span>
+                      </span>
+                    </th>
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MTableHeader-header-349 MuiTableCell-alignRight"
+                      scope="col"
+                      style="box-sizing: border-box;"
+                    >
+                      <span
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiTableSortLabel-root"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          aria-roledescription="Draggable item. Press space bar to lift"
+                          data-react-beautiful-dnd-drag-handle="1"
+                          data-react-beautiful-dnd-draggable="1"
+                          draggable="false"
+                          tabindex="0"
+                        >
+                          Timestamp
+                        </div>
+                        <span
+                          aria-hidden="true"
+                          class="material-icons MuiIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                        >
+                          arrow_downward
+                        </span>
+                      </span>
+                    </th>
+                    <th
+                      class="MuiTableCell-root MuiTableCell-head MTableHeader-header-349 MuiTableCell-alignLeft"
+                      scope="col"
+                      style="box-sizing: border-box;"
+                    >
+                      <span
+                        aria-disabled="false"
+                        class="MuiButtonBase-root MuiTableSortLabel-root"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          aria-roledescription="Draggable item. Press space bar to lift"
+                          data-react-beautiful-dnd-drag-handle="1"
+                          data-react-beautiful-dnd-draggable="1"
+                          draggable="false"
+                          tabindex="0"
+                        >
+                          Active
+                        </div>
+                        <span
+                          aria-hidden="true"
+                          class="material-icons MuiIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                        >
+                          arrow_downward
+                        </span>
+                      </span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="MuiTableBody-root"
+                >
+                  <tr
+                    class="MuiTableRow-root"
+                    index="0"
+                    level="0"
+                    path="0"
+                    style="transition: all ease 300ms;"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone"
+                      style="width: 48px; padding: 0px 5px; box-sizing: border-box;"
+                    >
+                      <div
+                        style="display: flex;"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
+                          tabindex="0"
+                          title="Edit"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="acceleration_x"
+                    >
+                      acceleration_x
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="m/s2"
+                    >
+                      m/s2
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="25.993848858558"
+                    >
+                      25.993848858558
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="1587759513448"
+                    >
+                      1587759513448
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="Y"
+                    >
+                      Y
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root"
+                    index="1"
+                    level="0"
+                    path="1"
+                    style="transition: all ease 300ms;"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone"
+                      style="width: 48px; padding: 0px 5px; box-sizing: border-box;"
+                    >
+                      <div
+                        style="display: flex;"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
+                          tabindex="0"
+                          title="Edit"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="acceleration_y"
+                    >
+                      acceleration_y
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="m/s2"
+                    >
+                      m/s2
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="-128.993848858558"
+                    >
+                      -128.993848858558
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="1587759502602"
+                    >
+                      1587759502602
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="N"
+                    >
+                      N
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root"
+                    index="2"
+                    level="0"
+                    path="2"
+                    style="transition: all ease 300ms;"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone"
+                      style="width: 48px; padding: 0px 5px; box-sizing: border-box;"
+                    >
+                      <div
+                        style="display: flex;"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
+                          tabindex="0"
+                          title="Edit"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="acceleration_z"
+                    >
+                      acceleration_z
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="m/s2"
+                    >
+                      m/s2
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="-0.53"
+                    >
+                      -0.53
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="1587759488674"
+                    >
+                      1587759488674
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="Y"
+                    >
+                      Y
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root"
+                    index="3"
+                    level="0"
+                    path="3"
+                    style="transition: all ease 300ms;"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone"
+                      style="width: 48px; padding: 0px 5px; box-sizing: border-box;"
+                    >
+                      <div
+                        style="display: flex;"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
+                          tabindex="0"
+                          title="Edit"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="rotation_alpha"
+                    >
+                      rotation_alpha
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="deg"
+                    >
+                      deg
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="356.63"
+                    >
+                      356.63
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="1587759475331"
+                    >
+                      1587759475331
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="N"
+                    >
+                      N
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root"
+                    index="4"
+                    level="0"
+                    path="4"
+                    style="transition: all ease 300ms;"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone"
+                      style="width: 48px; padding: 0px 5px; box-sizing: border-box;"
+                    >
+                      <div
+                        style="display: flex;"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
+                          tabindex="0"
+                          title="Edit"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="rotation_beta"
+                    >
+                      rotation_beta
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="deg"
+                    >
+                      deg
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="-18.14"
+                    >
+                      -18.14
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="1587759487946"
+                    >
+                      1587759487946
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="Y"
+                    >
+                      Y
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root"
+                    index="5"
+                    level="0"
+                    path="5"
+                    style="transition: all ease 300ms;"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone"
+                      style="width: 48px; padding: 0px 5px; box-sizing: border-box;"
+                    >
+                      <div
+                        style="display: flex;"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
+                          tabindex="0"
+                          title="Edit"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="rotation_gamma"
+                    >
+                      rotation_gamma
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="deg"
+                    >
+                      deg
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="-11.19"
+                    >
+                      -11.19
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="1587759461187"
+                    >
+                      1587759461187
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="Y"
+                    >
+                      Y
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root"
+                    index="6"
+                    level="0"
+                    path="6"
+                    style="transition: all ease 300ms;"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone"
+                      style="width: 48px; padding: 0px 5px; box-sizing: border-box;"
+                    >
+                      <div
+                        style="display: flex;"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
+                          tabindex="0"
+                          title="Edit"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="orientation"
+                    >
+                      orientation
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="deg"
+                    >
+                      deg
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="0"
+                    >
+                      0
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="1587759457220"
+                    >
+                      1587759457220
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="Y"
+                    >
+                      Y
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root"
+                    index="7"
+                    level="0"
+                    path="7"
+                    style="transition: all ease 300ms;"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone"
+                      style="width: 48px; padding: 0px 5px; box-sizing: border-box;"
+                    >
+                      <div
+                        style="display: flex;"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
+                          tabindex="0"
+                          title="Edit"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="latitude"
+                    >
+                      latitude
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value=""
+                    >
+                      
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="52.49"
+                    >
+                      52.49
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="1587759491346"
+                    >
+                      1587759491346
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="Y"
+                    >
+                      Y
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root"
+                    index="8"
+                    level="0"
+                    path="8"
+                    style="transition: all ease 300ms;"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone"
+                      style="width: 48px; padding: 0px 5px; box-sizing: border-box;"
+                    >
+                      <div
+                        style="display: flex;"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
+                          tabindex="0"
+                          title="Edit"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="rotation_rate_alpha"
+                    >
+                      rotation_rate_alpha
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="deg/s"
+                    >
+                      deg/s
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="0.04"
+                    >
+                      0.04
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="1587759493509"
+                    >
+                      1587759493509
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="Y"
+                    >
+                      Y
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root"
+                    index="9"
+                    level="0"
+                    path="9"
+                    style="transition: all ease 300ms;"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone"
+                      style="width: 48px; padding: 0px 5px; box-sizing: border-box;"
+                    >
+                      <div
+                        style="display: flex;"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
+                          tabindex="0"
+                          title="Edit"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="rotation_rate_beta"
+                    >
+                      rotation_rate_beta
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="deg/s"
+                    >
+                      deg/s
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="0.06"
+                    >
+                      0.06
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="1587759506937"
+                    >
+                      1587759506937
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="Y"
+                    >
+                      Y
+                    </td>
+                  </tr>
+                  <tr
+                    class="MuiTableRow-root"
+                    index="10"
+                    level="0"
+                    path="10"
+                    style="transition: all ease 300ms;"
+                  >
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-paddingNone"
+                      style="width: 48px; padding: 0px 5px; box-sizing: border-box;"
+                    >
+                      <div
+                        style="display: flex;"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
+                          tabindex="0"
+                          title="Edit"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </div>
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="rotation_rate_gamma"
+                    >
+                      rotation_rate_gamma
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="deg/s"
+                    >
+                      deg/s
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="0"
+                    >
+                      0
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
+                      style="box-sizing: border-box;"
+                      value="1587759531401"
+                    >
+                      1587759531401
+                    </td>
+                    <td
+                      class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                      style="box-sizing: border-box;"
+                      value="Y"
+                    >
+                      Y
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>
+      Number of active devices: 
+      9
+    </p>
+    <p>
+      Number of inactive devices:
+       
+      2
+    </p>
+  </div>
+</div>
+`;

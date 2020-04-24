@@ -5,6 +5,7 @@ import Edit from '@material-ui/icons/Edit';
 import ResetSearch from '@material-ui/icons/Close';
 import Save from '@material-ui/icons/Check';
 import Search from '@material-ui/icons/Search';
+import fetch from 'isomorphic-fetch';
 
 import {
   IDeviceResponse,
@@ -55,7 +56,7 @@ const Devices: FC<{}> = () => {
       : [];
     setActiveCount(activeDevices.length);
     setDevicesState(devices);
-  });
+  }, [devices]);
 
   const handleOnRowUpdate = (newData: IRowUpdateNewDataResponse): void => {
     const opts = {
@@ -65,16 +66,18 @@ const Devices: FC<{}> = () => {
     const url = `${BASE_API}/devices/${newData.name}?active=${active}`;
     fetch(url, opts)
       .then(response => {
-        if (response.status === 200) {
-          return response.json();
+        if (response.status !== 200) {
+          throw new Error(
+            `Error while updating device: ${response.statusText}`
+          );
         }
-        throw new Error('Error while updating state');
       })
       .then(() => {
         setDevicesUpdating(false);
       })
       .catch(err => {
-        alert(err);
+        setDevicesUpdating(false);
+        alert(err.message);
       });
   };
 
@@ -82,7 +85,7 @@ const Devices: FC<{}> = () => {
     <div style={{ maxWidth: '100%', paddingBottom: '50px' }}>
       <MaterialTable
         editable={{
-          onRowUpdate: (newData: IRowUpdateNewDataResponse): Promise<any> => {
+          onRowUpdate: (newData: IRowUpdateNewDataResponse): Promise<void> => {
             return new Promise(resolve => {
               setDevicesUpdating(true);
               resolve(handleOnRowUpdate(newData));
@@ -120,6 +123,10 @@ const Devices: FC<{}> = () => {
         }}
       />
       <p>Number of active devices: {activeCount}</p>
+      <p>
+        Number of inactive devices:{' '}
+        {devicesState ? devicesState.data.length - activeCount : 0}
+      </p>
     </div>
   );
 };

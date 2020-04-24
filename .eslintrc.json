@@ -41,6 +41,7 @@
 		"@typescript-eslint/indent": "off",
 		"@typescript-eslint/interface-name-prefix": "off",
 		"@typescript-eslint/prefer-interface": "off",
+		"@typescript-eslint/no-var-requires": "off",
 		"comma-dangle": [
 			"error",
 			"never"
