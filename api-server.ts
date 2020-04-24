@@ -1,5 +1,6 @@
-import restify, { Request, Response, Next } from 'restify';
+import restify, { Request, Response } from 'restify';
 import corsMiddleware from 'restify-cors-middleware';
+
 import deviceReadings from './deviceReadings';
 
 const ipAddress = '127.0.0.1';
@@ -12,25 +13,24 @@ server.use(plugins.queryParser());
 
 const cors = corsMiddleware({
   allowHeaders: [],
-  exposeHeaders: [],	
+  exposeHeaders: [],
   preflightMaxAge: 5,
-  origins: ['*'],
+  origins: ['*']
 });
 
 server.pre(cors.preflight);
 server.use(cors.actual);
 
-const PATH = '/devices';
-server.get({ path: PATH }, getDeviceReading);
-server.patch({ path: PATH + '/:readingName' }, patchDeviceReading);
-
-function getDeviceReading(_req: Request, res: Response, _next: Next) {
+const getDeviceReading = (_req: Request, res: Response): void => {
   res.send(200, {
-    data: deviceReadings,
+    data: deviceReadings
   });
-}
+};
 
-function patchDeviceReading(req: Request, res: Response, _next: Next) {
+const patchDeviceReading = (
+  req: Request,
+  res: Response
+): Response | null | undefined => {
   if (!req.params.readingName || !req.query.active) {
     res.send(400);
     return;
@@ -43,7 +43,7 @@ function patchDeviceReading(req: Request, res: Response, _next: Next) {
       return null;
     }
     const targetIndex = deviceReadings.findIndex(
-      el => el.name === req.params.readingName,
+      el => el.name === req.params.readingName
     );
     deviceReadings[targetIndex].active = req.query.active === 'true';
     setTimeout(() => {
@@ -53,7 +53,11 @@ function patchDeviceReading(req: Request, res: Response, _next: Next) {
     console.log(e);
     res.send(400, e);
   }
-}
+};
+
+const PATH = '/devices';
+server.get({ path: PATH }, getDeviceReading);
+server.patch({ path: `${PATH}/:readingName` }, patchDeviceReading);
 
 server.listen(port, ipAddress, () => {
   console.log('%s listening at %s ', server.name, server.url);

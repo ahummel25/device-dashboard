@@ -4,6 +4,8 @@
 	"description": "relayr frontend hiring test",
 	"main": "index.tsx",
 	"scripts": {
+		"lint": "eslint src/ --ext .js,.ts,.jsx,.tsx",
+		"lint-fix": "eslint src/ --ext .js,.ts,.jsx,.tsx --fix",
 		"start": "npm run start:api | npm run start:app",
 		"start:app": "webpack-dev-server --mode development --open",
 		"start:api": "ts-node api-server.ts"
@@ -19,7 +21,8 @@
 		"@types/restify-cors-middleware": "^1.0.1",
 		"material-table": "^1.57.2",
 		"react": "^16.7.0",
-		"react-dom": "^16.7.0"
+		"react-dom": "^16.7.0",
+		"remove": "^0.1.5"
 	},
 	"devDependencies": {
 		"@babel/core": "7.1.6",
@@ -30,8 +33,16 @@
 		"@types/webpack": "^4.41.12",
 		"@types/webpack-dev-server": "^3.10.1",
 		"@types/webpack-env": "^1.15.2",
+		"@typescript-eslint/eslint-plugin": "^2.29.0",
+		"@typescript-eslint/parser": "^2.29.0",
 		"babel-loader": "^8.0.4",
 		"css-loader": "^0.28.11",
+		"eslint": "^6.8.0",
+		"eslint-plugin-graphql": "^3.1.1",
+		"eslint-plugin-import": "^2.20.2",
+		"eslint-plugin-prettierx": "^0.11.0",
+		"eslint-plugin-react": "^7.19.0",
+		"eslint-plugin-react-hooks": "^3.0.0",
 		"extract-text-webpack-plugin": "^3.0.2",
 		"html-webpack-plugin": "^3.2.0",
 		"mini-css-extract-plugin": "^0.5.0",

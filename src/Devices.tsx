@@ -1,58 +1,127 @@
 import React, { FC, forwardRef, useEffect, useState } from 'react';
-import styled from '@emotion/styled'
-import MaterialTable from 'material-table'
+import MaterialTable from 'material-table';
 import Cancel from '@material-ui/icons/Clear';
 import Edit from '@material-ui/icons/Edit';
 import ResetSearch from '@material-ui/icons/Close';
 import Save from '@material-ui/icons/Check';
 import Search from '@material-ui/icons/Search';
-import { IDeviceResponse } from './interfaces'
-import { useGetDevices } from './utils/hooks'
 
-const MaterialTableStyled = styled(({ ...rest }) => <MaterialTable {...rest} />)`
-`
+import {
+  IDeviceResponse,
+  IDevicesResponse,
+  IRowUpdateNewDataResponse
+} from './types';
+import { useGetDevices } from './utils/hooks';
+import { BASE_API } from './services/api';
+
 const Devices: FC<{}> = () => {
-	const devices = useGetDevices();
-	const [activeCount, setActiveCount] = useState<number>(0);
-	const tableIcons = {
-		Clear: forwardRef((props: any, ref: React.Ref<SVGElement>) => <Cancel {...props} ref={ref} />),
-		Edit: forwardRef((props: any, ref: React.Ref<SVGElement>) => <Edit {...props} ref={ref} />),
-		ResetSearch: forwardRef((props: any, ref: React.Ref<SVGElement>) => <ResetSearch {...props} ref={ref} />),
-		Check: forwardRef((props: any, ref: React.Ref<SVGElement>) => <Save {...props} ref={ref} />),
-		Search: forwardRef((props: any, ref: React.Ref<SVGElement>) => <Search {...props} ref={ref} />),
-	}
-	
-	useEffect(() => {
-		const activeDevices = devices ? devices.data.map((device: IDeviceResponse) => device.active) : []
-		setActiveCount(activeDevices.length)
-	  });
+  const [devicesUpdating, setDevicesUpdating] = useState<boolean>(false);
+  const [devicesState, setDevicesState] = useState<IDevicesResponse | null>(
+    null
+  );
+  const devices = useGetDevices(devicesUpdating);
+  const [activeCount, setActiveCount] = useState<number>(0);
+  const tableIcons = {
+    Clear: forwardRef(
+      (props: any, ref: React.Ref<SVGElement>): JSX.Element => (
+        <Cancel {...props} ref={ref} />
+      )
+    ),
+    Edit: forwardRef(
+      (props: any, ref: React.Ref<SVGElement>): JSX.Element => (
+        <Edit {...props} ref={ref} />
+      )
+    ),
+    ResetSearch: forwardRef(
+      (props: any, ref: React.Ref<SVGElement>): JSX.Element => (
+        <ResetSearch {...props} ref={ref} />
+      )
+    ),
+    Check: forwardRef(
+      (props: any, ref: React.Ref<SVGElement>): JSX.Element => (
+        <Save {...props} ref={ref} />
+      )
+    ),
+    Search: forwardRef(
+      (props: any, ref: React.Ref<SVGElement>): JSX.Element => (
+        <Search {...props} ref={ref} />
+      )
+    )
+  };
 
-    return (
-		<div style={{ maxWidth: '100%' }}>
-		<MaterialTableStyled
-			editable={{
-				onRowUpdate: (newData, oldData) =>
-				{
-					console.log(newData, oldData)
-				}
-			}}
-			title="Devices"
-			columns={[
-				{ title: 'Name', field: 'name', editable: 'never' },
-				{ title: 'Unit', field: 'unit', editable: 'never' },
-				{ title: 'Value', field: 'value', editable: 'never', type: 'numeric' },
-				{ title: 'Timestamp', field: 'timestamp', editable: 'never', type: 'numeric', },
-				{ title: 'Active', field: 'active', editable: 'always', lookup: { true: 'Y', false: 'N' } },
-			]}
-			data={devices ? devices.data : []}
-			icons={tableIcons}
-			options={{
-				paging: false
-			}}
-		/>
- 		<p>Number of active devices: {activeCount}</p>
-		</div>
-    );
-}
+  useEffect(() => {
+    const activeDevices = devices
+      ? devices.data.filter((device: IDeviceResponse) => device.active)
+      : [];
+    setActiveCount(activeDevices.length);
+    setDevicesState(devices);
+  });
+
+  const handleOnRowUpdate = (newData: IRowUpdateNewDataResponse): void => {
+    const opts = {
+      method: 'PATCH'
+    };
+    const active = newData.active;
+    const url = `${BASE_API}/devices/${newData.name}?active=${active}`;
+    fetch(url, opts)
+      .then(response => {
+        if (response.status === 200) {
+          return response.json();
+        }
+        throw new Error('Error while updating state');
+      })
+      .then(() => {
+        setDevicesUpdating(false);
+      })
+      .catch(err => {
+        alert(err);
+      });
+  };
+
+  return (
+    <div style={{ maxWidth: '100%', paddingBottom: '50px' }}>
+      <MaterialTable
+        editable={{
+          onRowUpdate: (newData: IRowUpdateNewDataResponse): Promise<any> => {
+            return new Promise(resolve => {
+              setDevicesUpdating(true);
+              resolve(handleOnRowUpdate(newData));
+            });
+          }
+        }}
+        title="Devices"
+        columns={[
+          { title: 'Name', field: 'name', editable: 'never' },
+          { title: 'Unit', field: 'unit', editable: 'never' },
+          {
+            title: 'Value',
+            field: 'value',
+            editable: 'never',
+            type: 'numeric'
+          },
+          {
+            title: 'Timestamp',
+            field: 'timestamp',
+            editable: 'never',
+            type: 'numeric'
+          },
+          {
+            title: 'Active',
+            field: 'active',
+            editable: 'always',
+            lookup: { true: 'Y', false: 'N' }
+          }
+        ]}
+        data={devicesState ? devicesState.data : []}
+        icons={tableIcons}
+        isLoading={devicesUpdating}
+        options={{
+          paging: false
+        }}
+      />
+      <p>Number of active devices: {activeCount}</p>
+    </div>
+  );
+};
 
 export default Devices;
