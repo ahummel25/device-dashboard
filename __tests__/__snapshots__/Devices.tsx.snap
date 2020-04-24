@@ -9,10 +9,10 @@ exports[`Devices.tsx matches snapshot 1`] = `
     style="position: relative;"
   >
     <div
-      class="MuiToolbar-root MuiToolbar-regular MTableToolbar-root-229 MuiToolbar-gutters"
+      class="MuiToolbar-root MuiToolbar-regular MTableToolbar-root-220 MuiToolbar-gutters"
     >
       <div
-        class="MTableToolbar-title-233"
+        class="MTableToolbar-title-224"
       >
         <h6
           class="MuiTypography-root MuiTypography-h6"
@@ -22,10 +22,10 @@ exports[`Devices.tsx matches snapshot 1`] = `
         </h6>
       </div>
       <div
-        class="MTableToolbar-spacer-231"
+        class="MTableToolbar-spacer-222"
       />
       <div
-        class="MuiFormControl-root MuiTextField-root MTableToolbar-searchField-234"
+        class="MuiFormControl-root MuiTextField-root MTableToolbar-searchField-225"
       >
         <div
           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd"
@@ -80,7 +80,7 @@ exports[`Devices.tsx matches snapshot 1`] = `
         </div>
       </div>
       <div
-        class="MTableToolbar-actions-232"
+        class="MTableToolbar-actions-223"
       >
         <div>
           <div>
@@ -90,7 +90,7 @@ exports[`Devices.tsx matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="Component-horizontalScrollContainer-346"
+      class="Component-horizontalScrollContainer-337"
       style="overflow-x: auto; position: relative;"
     >
       <div>
@@ -109,7 +109,7 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   class="MuiTableRow-root MuiTableRow-head"
                 >
                   <th
-                    class="MuiTableCell-root MuiTableCell-head MTableHeader-header-349 MuiTableCell-paddingCheckbox"
+                    class="MuiTableCell-root MuiTableCell-head MTableHeader-header-340 MuiTableCell-paddingCheckbox"
                     scope="col"
                     style="width: 48px; text-align: center; box-sizing: border-box;"
                   >
@@ -133,7 +133,7 @@ exports[`Devices.tsx matches snapshot 1`] = `
                     </span>
                   </th>
                   <th
-                    class="MuiTableCell-root MuiTableCell-head MTableHeader-header-349 MuiTableCell-alignLeft"
+                    class="MuiTableCell-root MuiTableCell-head MTableHeader-header-340 MuiTableCell-alignLeft"
                     scope="col"
                     style="box-sizing: border-box;"
                   >
@@ -152,16 +152,20 @@ exports[`Devices.tsx matches snapshot 1`] = `
                       >
                         Name
                       </div>
-                      <span
+                      <svg
                         aria-hidden="true"
-                        class="material-icons MuiIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                        class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                        focusable="false"
+                        viewBox="0 0 24 24"
                       >
-                        arrow_downward
-                      </span>
+                        <path
+                          d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+                        />
+                      </svg>
                     </span>
                   </th>
                   <th
-                    class="MuiTableCell-root MuiTableCell-head MTableHeader-header-349 MuiTableCell-alignLeft"
+                    class="MuiTableCell-root MuiTableCell-head MTableHeader-header-340 MuiTableCell-alignLeft"
                     scope="col"
                     style="box-sizing: border-box;"
                   >
@@ -180,16 +184,20 @@ exports[`Devices.tsx matches snapshot 1`] = `
                       >
                         Unit
                       </div>
-                      <span
+                      <svg
                         aria-hidden="true"
-                        class="material-icons MuiIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                        class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                        focusable="false"
+                        viewBox="0 0 24 24"
                       >
-                        arrow_downward
-                      </span>
+                        <path
+                          d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+                        />
+                      </svg>
                     </span>
                   </th>
                   <th
-                    class="MuiTableCell-root MuiTableCell-head MTableHeader-header-349 MuiTableCell-alignRight"
+                    class="MuiTableCell-root MuiTableCell-head MTableHeader-header-340 MuiTableCell-alignRight"
                     scope="col"
                     style="box-sizing: border-box;"
                   >
@@ -208,16 +216,20 @@ exports[`Devices.tsx matches snapshot 1`] = `
                       >
                         Value
                       </div>
-                      <span
+                      <svg
                         aria-hidden="true"
-                        class="material-icons MuiIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                        class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                        focusable="false"
+                        viewBox="0 0 24 24"
                       >
-                        arrow_downward
-                      </span>
+                        <path
+                          d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+                        />
+                      </svg>
                     </span>
                   </th>
                   <th
-                    class="MuiTableCell-root MuiTableCell-head MTableHeader-header-349 MuiTableCell-alignRight"
+                    class="MuiTableCell-root MuiTableCell-head MTableHeader-header-340 MuiTableCell-alignRight"
                     scope="col"
                     style="box-sizing: border-box;"
                   >
@@ -236,16 +248,20 @@ exports[`Devices.tsx matches snapshot 1`] = `
                       >
                         Timestamp
                       </div>
-                      <span
+                      <svg
                         aria-hidden="true"
-                        class="material-icons MuiIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                        class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                        focusable="false"
+                        viewBox="0 0 24 24"
                       >
-                        arrow_downward
-                      </span>
+                        <path
+                          d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+                        />
+                      </svg>
                     </span>
                   </th>
                   <th
-                    class="MuiTableCell-root MuiTableCell-head MTableHeader-header-349 MuiTableCell-alignLeft"
+                    class="MuiTableCell-root MuiTableCell-head MTableHeader-header-340 MuiTableCell-alignLeft"
                     scope="col"
                     style="box-sizing: border-box;"
                   >
@@ -264,12 +280,16 @@ exports[`Devices.tsx matches snapshot 1`] = `
                       >
                         Active
                       </div>
-                      <span
+                      <svg
                         aria-hidden="true"
-                        class="material-icons MuiIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                        class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                        focusable="false"
+                        viewBox="0 0 24 24"
                       >
-                        arrow_downward
-                      </span>
+                        <path
+                          d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+                        />
+                      </svg>
                     </span>
                   </th>
                 </tr>
@@ -341,9 +361,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587759439340"
+                    value="1587760915297"
                   >
-                    1587759439340
+                    1587760915297
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -417,9 +437,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587759436914"
+                    value="1587760935259"
                   >
-                    1587759436914
+                    1587760935259
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -493,9 +513,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587759478112"
+                    value="1587760877623"
                   >
-                    1587759478112
+                    1587760877623
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -569,9 +589,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587759484869"
+                    value="1587760878443"
                   >
-                    1587759484869
+                    1587760878443
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -645,9 +665,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587759503964"
+                    value="1587760931591"
                   >
-                    1587759503964
+                    1587760931591
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -721,9 +741,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587759477709"
+                    value="1587760902647"
                   >
-                    1587759477709
+                    1587760902647
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -797,9 +817,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587759518999"
+                    value="1587760849039"
                   >
-                    1587759518999
+                    1587760849039
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -873,9 +893,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587759519092"
+                    value="1587760903387"
                   >
-                    1587759519092
+                    1587760903387
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -949,9 +969,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587759481255"
+                    value="1587760906330"
                   >
-                    1587759481255
+                    1587760906330
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -1025,9 +1045,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587759531902"
+                    value="1587760903764"
                   >
-                    1587759531902
+                    1587760903764
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -1101,9 +1121,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587759503069"
+                    value="1587760859716"
                   >
-                    1587759503069
+                    1587760859716
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"

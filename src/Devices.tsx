@@ -1,5 +1,6 @@
 import React, { FC, forwardRef, useEffect, useState } from 'react';
 import MaterialTable from 'material-table';
+import ArrowUpward from '@material-ui/icons/ArrowUpward';
 import Cancel from '@material-ui/icons/Clear';
 import Edit from '@material-ui/icons/Edit';
 import ResetSearch from '@material-ui/icons/Close';
@@ -46,6 +47,11 @@ const Devices: FC<{}> = () => {
     Search: forwardRef(
       (props: any, ref: React.Ref<SVGElement>): JSX.Element => (
         <Search {...props} ref={ref} />
+      )
+    ),
+    SortArrow: forwardRef(
+      (props: any, ref: React.Ref<SVGElement>): JSX.Element => (
+        <ArrowUpward {...props} ref={ref} />
       )
     )
   };
