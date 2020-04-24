@@ -4,7 +4,8 @@ import {
   cleanup,
   fireEvent,
   render,
-  RenderResult
+  RenderResult,
+  waitFor
 } from '@testing-library/react';
 import _fetchMock from 'isomorphic-fetch';
 
@@ -127,5 +128,27 @@ describe('Devices.tsx', (): void => {
 	const buttons4 = getAllByRole('button');
     expect(buttons4.length).toBe(18);
 	*/
+  });
+
+  it('should test search', async (): Promise<void> => {
+    const { getByPlaceholderText, getByText, queryByText } = component;
+    const search = getByPlaceholderText('Search');
+
+    fireEvent.change(search, {
+      target: { value: 'zzz' }
+    });
+
+    await waitFor(() =>
+      expect(getByText(/No records to display/)).toBeInTheDocument()
+    );
+
+    fireEvent.change(search, {
+      target: { value: 'ori' }
+    });
+
+    await waitFor(() => {
+      expect(queryByText(/No records to display/)).not.toBeInTheDocument();
+      expect(getByText('orientation')).toBeInTheDocument();
+    });
   });
 });
