@@ -71,14 +71,11 @@ const Devices: FC<{}> = () => {
     const active = newData.active;
     const url = `${BASE_API}/devices/${newData.name}?active=${active}`;
     fetch(url, opts)
-      .then(response => {
+      .then(async response => {
+        const jsonResponse = await response.json();
         if (response.status !== 200) {
-          throw new Error(
-            `Error while updating device: ${response.statusText}`
-          );
+          throw new Error(`Error while updating device: ${jsonResponse}`);
         }
-      })
-      .then(() => {
         setDevicesUpdating(false);
       })
       .catch(err => {
