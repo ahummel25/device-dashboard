@@ -1,4 +1,4 @@
-export interface IDeviceResponse {
+export interface IDeviceData {
   name: string;
   unit: string;
   value: number;
@@ -6,10 +6,6 @@ export interface IDeviceResponse {
   active: boolean;
 }
 
-export interface IDevicesResponse {
-  data: IDeviceResponse[];
+export interface IDeviceResponse {
+  data: IDeviceData[];
 }
-
-export type IRowUpdateNewDataResponse = Omit<IDeviceResponse, 'active'> & {
-  active: boolean | string;
-};

@@ -17,8 +17,7 @@ type FetchMock = typeof import('fetch-mock');
 
 describe('Devices.tsx', (): void => {
   let component: RenderResult;
-  // @ts-ignore
-  const fetchMock = _fetchMock as FetchMock;
+  const fetchMock = (_fetchMock as unknown) as FetchMock;
   afterEach(() => {
     const fetchCalled1 = fetchMock.called(/devices/);
     expect(fetchCalled1).toBeTruthy();
@@ -150,5 +149,34 @@ describe('Devices.tsx', (): void => {
       expect(queryByText(/No records to display/)).not.toBeInTheDocument();
       expect(getByText('orientation')).toBeInTheDocument();
     });
+  });
+
+  it('should handle error from server', async (): Promise<void> => {
+    jest.spyOn(window, 'alert').mockImplementation(() => '');
+    const { getAllByRole } = component;
+    const buttons1 = getAllByRole('button');
+    expect(buttons1.length).toBe(18);
+
+    // Click on first pencil edit button
+    fireEvent.click(buttons1[7]);
+
+    const inputs = document.getElementsByTagName('input');
+
+    // Click active from true to false
+    fireEvent.change(inputs[1], {
+      target: { value: 'false' }
+    });
+
+    fetchMock.mock(`${BASE_API}/devices/acceleration_x?active=true`, () => {
+      throw new Error('device state patch failed');
+    });
+
+    const buttons3 = getAllByRole('button');
+
+    await act(async () => {
+      fireEvent.click(buttons3[7]);
+    });
+
+    expect(window.alert).toHaveBeenCalledWith('device state patch failed');
   });
 });

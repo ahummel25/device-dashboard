@@ -1,5 +1,5 @@
 import React, { FC, forwardRef, useEffect, useState } from 'react';
-import MaterialTable from 'material-table';
+import MaterialTable, { Column } from 'material-table';
 import ArrowUpward from '@material-ui/icons/ArrowUpward';
 import Cancel from '@material-ui/icons/Clear';
 import Edit from '@material-ui/icons/Edit';
@@ -8,19 +8,36 @@ import Save from '@material-ui/icons/Check';
 import Search from '@material-ui/icons/Search';
 import fetch from 'isomorphic-fetch';
 
-import {
-  IDeviceResponse,
-  IDevicesResponse,
-  IRowUpdateNewDataResponse
-} from './types';
+import { IDeviceData } from './types';
 import { useGetDevices } from './utils/hooks';
 import { BASE_API } from './services/api';
 
 const Devices: FC<{}> = () => {
+  const deviceColumns: Column<IDeviceData>[] = [
+    { title: 'Name', field: 'name', editable: 'never' },
+    { title: 'Unit', field: 'unit', editable: 'never' },
+    {
+      title: 'Value',
+      field: 'value',
+      editable: 'never',
+      type: 'numeric'
+    },
+    {
+      title: 'Timestamp',
+      field: 'timestamp',
+      editable: 'never',
+      type: 'numeric'
+    },
+    {
+      title: 'Active',
+      field: 'active',
+      editable: 'always',
+      lookup: { true: 'Y', false: 'N' }
+    }
+  ];
   const [devicesUpdating, setDevicesUpdating] = useState<boolean>(false);
-  const [devicesState, setDevicesState] = useState<IDevicesResponse | null>(
-    null
-  );
+  const [columns] = useState<Column<IDeviceData>[]>(deviceColumns);
+  const [data, setData] = useState<IDeviceData[] | null>(null);
   const devices = useGetDevices(devicesUpdating);
   const [activeCount, setActiveCount] = useState<number>(0);
   const tableIcons = {
@@ -58,13 +75,13 @@ const Devices: FC<{}> = () => {
 
   useEffect(() => {
     const activeDevices = devices
-      ? devices.data.filter((device: IDeviceResponse) => device.active)
+      ? devices.filter((device: IDeviceData) => device.active)
       : [];
     setActiveCount(activeDevices.length);
-    setDevicesState(devices);
+    setData(devices);
   }, [devices]);
 
-  const handleOnRowUpdate = (newData: IRowUpdateNewDataResponse): void => {
+  const handleOnRowUpdate = (newData: IDeviceData): void => {
     const opts = {
       method: 'PATCH'
     };
@@ -87,38 +104,17 @@ const Devices: FC<{}> = () => {
   return (
     <div style={{ maxWidth: '100%', paddingBottom: '50px' }}>
       <MaterialTable
+        title="Devices"
         editable={{
-          onRowUpdate: (newData: IRowUpdateNewDataResponse): Promise<void> => {
+          onRowUpdate: (newData: IDeviceData): Promise<void> => {
             return new Promise(resolve => {
               setDevicesUpdating(true);
               resolve(handleOnRowUpdate(newData));
             });
           }
         }}
-        title="Devices"
-        columns={[
-          { title: 'Name', field: 'name', editable: 'never' },
-          { title: 'Unit', field: 'unit', editable: 'never' },
-          {
-            title: 'Value',
-            field: 'value',
-            editable: 'never',
-            type: 'numeric'
-          },
-          {
-            title: 'Timestamp',
-            field: 'timestamp',
-            editable: 'never',
-            type: 'numeric'
-          },
-          {
-            title: 'Active',
-            field: 'active',
-            editable: 'always',
-            lookup: { true: 'Y', false: 'N' }
-          }
-        ]}
-        data={devicesState ? devicesState.data : []}
+        columns={columns}
+        data={data ? data : []}
         icons={tableIcons}
         isLoading={devicesUpdating}
         options={{
@@ -126,10 +122,7 @@ const Devices: FC<{}> = () => {
         }}
       />
       <p>Number of active devices: {activeCount}</p>
-      <p>
-        Number of inactive devices:{' '}
-        {devicesState ? devicesState.data.length - activeCount : 0}
-      </p>
+      <p>Number of inactive devices: {data ? data.length - activeCount : 0}</p>
     </div>
   );
 };

@@ -361,9 +361,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587778335634"
+                    value="1587860122794"
                   >
-                    1587778335634
+                    1587860122794
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -437,9 +437,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587778342918"
+                    value="1587860164973"
                   >
-                    1587778342918
+                    1587860164973
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -513,9 +513,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587778310638"
+                    value="1587860112636"
                   >
-                    1587778310638
+                    1587860112636
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -589,9 +589,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587778368844"
+                    value="1587860180956"
                   >
-                    1587778368844
+                    1587860180956
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -665,9 +665,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587778362958"
+                    value="1587860156930"
                   >
-                    1587778362958
+                    1587860156930
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -741,9 +741,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587778335845"
+                    value="1587860117836"
                   >
-                    1587778335845
+                    1587860117836
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -817,9 +817,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587778327769"
+                    value="1587860128121"
                   >
-                    1587778327769
+                    1587860128121
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -893,9 +893,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587778349394"
+                    value="1587860146563"
                   >
-                    1587778349394
+                    1587860146563
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -969,9 +969,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587778363474"
+                    value="1587860085694"
                   >
-                    1587778363474
+                    1587860085694
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -1045,9 +1045,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587778357073"
+                    value="1587860084205"
                   >
-                    1587778357073
+                    1587860084205
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -1121,9 +1121,9 @@ exports[`Devices.tsx matches snapshot 1`] = `
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight"
                     style="box-sizing: border-box;"
-                    value="1587778355572"
+                    value="1587860163528"
                   >
-                    1587778355572
+                    1587860163528
                   </td>
                   <td
                     class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
@@ -1145,8 +1145,7 @@ exports[`Devices.tsx matches snapshot 1`] = `
     9
   </p>
   <p>
-    Number of inactive devices:
-     
+    Number of inactive devices: 
     2
   </p>
 </div>

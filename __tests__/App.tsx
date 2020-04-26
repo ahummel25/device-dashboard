@@ -10,8 +10,7 @@ type FetchMock = typeof import('fetch-mock');
 
 describe('App.tsx', (): void => {
   let component: RenderResult;
-  // @ts-ignore
-  const fetchMock = _fetchMock as FetchMock;
+  const fetchMock = (_fetchMock as unknown) as FetchMock;
   afterEach(() => {
     fetchMock.restore();
   });
