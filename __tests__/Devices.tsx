@@ -20,10 +20,10 @@ describe('Devices.tsx', (): void => {
   const fetchMock = (_fetchMock as unknown) as FetchMock;
   afterEach(() => {
     const fetchCalled1 = fetchMock.called(/devices/);
-    expect(fetchCalled1).toBeTruthy();
+    expect(fetchCalled1).toBe(true);
 
     const fetchCalled2 = fetchMock.called(/device\/123/);
-    expect(fetchCalled2).toBeFalsy();
+    expect(fetchCalled2).toBe(false);
 
     cleanup(), fetchMock.restore();
   });
@@ -151,8 +151,7 @@ describe('Devices.tsx', (): void => {
     });
   });
 
-  it('should handle error from server', async (): Promise<void> => {
-    jest.spyOn(window, 'alert').mockImplementation(() => '');
+  it('should not call api when no change is made', async (): Promise<void> => {
     const { getAllByRole } = component;
     const buttons1 = getAllByRole('button');
     expect(buttons1.length).toBe(18);
@@ -160,23 +159,32 @@ describe('Devices.tsx', (): void => {
     // Click on first pencil edit button
     fireEvent.click(buttons1[7]);
 
-    const inputs = document.getElementsByTagName('input');
+    const options = {
+      method: 'PATCH'
+    };
+    const response = {
+      status: 200,
+      statusText: 'OK'
+    };
 
-    // Click active from true to false
-    fireEvent.change(inputs[1], {
-      target: { value: 'false' }
-    });
-
-    fetchMock.mock(`${BASE_API}/devices/acceleration_x?active=true`, () => {
-      throw new Error('device state patch failed');
-    });
+    fetchMock.mock(
+      `${BASE_API}/devices/acceleration_x?active=true`,
+      response,
+      options
+    );
 
     const buttons3 = getAllByRole('button');
+
+    expect(buttons3.length).toBe(20);
 
     await act(async () => {
       fireEvent.click(buttons3[7]);
     });
 
-    expect(window.alert).toHaveBeenCalledWith('device state patch failed');
+    const fetchUpdateCalled = fetchMock.called(
+      /devices\/acceleration_x\?active=true/
+    );
+
+    expect(fetchUpdateCalled).toBe(false);
   });
 });

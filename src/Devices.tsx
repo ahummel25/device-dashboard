@@ -106,8 +106,14 @@ const Devices: FC<{}> = () => {
       <MaterialTable
         title="Devices"
         editable={{
-          onRowUpdate: (newData: IDeviceData): Promise<void> => {
+          onRowUpdate: (
+            newData: IDeviceData,
+            oldData?: IDeviceData
+          ): Promise<void> => {
             return new Promise(resolve => {
+              if (newData.active === oldData?.active) {
+                return resolve();
+              }
               setDevicesUpdating(true);
               resolve(handleOnRowUpdate(newData));
             });
