@@ -36,38 +36,38 @@ const Devices: FC<{}> = () => {
     }
   ];
   const [devicesUpdating, setDevicesUpdating] = useState<boolean>(false);
-  const [columns] = useState<Column<IDeviceData>[]>(deviceColumns);
+  const [columns, setColumns] = useState<Column<IDeviceData>[]>(deviceColumns);
   const [data, setData] = useState<IDeviceData[] | null>(null);
   const devices = useGetDevices(devicesUpdating);
   const [activeCount, setActiveCount] = useState<number>(0);
   const tableIcons = {
     Clear: forwardRef(
-      (props: any, ref: React.Ref<SVGElement>): JSX.Element => (
+      (props: any, ref: React.Ref<SVGSVGElement>): JSX.Element => (
         <Cancel {...props} ref={ref} />
       )
     ),
     Edit: forwardRef(
-      (props: any, ref: React.Ref<SVGElement>): JSX.Element => (
+      (props: any, ref: React.Ref<SVGSVGElement>): JSX.Element => (
         <Edit {...props} ref={ref} />
       )
     ),
     ResetSearch: forwardRef(
-      (props: any, ref: React.Ref<SVGElement>): JSX.Element => (
+      (props: any, ref: React.Ref<SVGSVGElement>): JSX.Element => (
         <ResetSearch {...props} ref={ref} />
       )
     ),
     Check: forwardRef(
-      (props: any, ref: React.Ref<SVGElement>): JSX.Element => (
+      (props: any, ref: React.Ref<SVGSVGElement>): JSX.Element => (
         <Save {...props} ref={ref} />
       )
     ),
     Search: forwardRef(
-      (props: any, ref: React.Ref<SVGElement>): JSX.Element => (
+      (props: any, ref: React.Ref<SVGSVGElement>): JSX.Element => (
         <Search {...props} ref={ref} />
       )
     ),
     SortArrow: forwardRef(
-      (props: any, ref: React.Ref<SVGElement>): JSX.Element => (
+      (props: any, ref: React.Ref<SVGSVGElement>): JSX.Element => (
         <ArrowUpward {...props} ref={ref} />
       )
     )
@@ -75,7 +75,7 @@ const Devices: FC<{}> = () => {
 
   useEffect(() => {
     const activeDevices = devices
-      ? devices.filter((device: IDeviceData) => device.active)
+      ? devices.filter((device: IDeviceData): boolean => device.active)
       : [];
     setActiveCount(activeDevices.length);
     setData(devices);
@@ -101,6 +101,28 @@ const Devices: FC<{}> = () => {
       });
   };
 
+  useEffect(() => {
+    const savedColumnOrder = localStorage.getItem('column-order');
+    if (savedColumnOrder) {
+      const parsedColumns = JSON.parse(savedColumnOrder);
+      setColumns(parsedColumns);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('column-order', JSON.stringify(columns));
+  }, [columns]);
+
+  const handleOnColumnDragged = (
+    sourceIndex: number,
+    destinationIndex: number
+  ): void => {
+    const columnsCopy = [...columns];
+    const columnToReorder = columnsCopy.splice(sourceIndex, 1)[0];
+    columnsCopy.splice(destinationIndex, 0, columnToReorder);
+    setColumns(columnsCopy);
+  };
+
   return (
     <div style={{ maxWidth: '100%', paddingBottom: '50px' }}>
       <MaterialTable
@@ -111,7 +133,7 @@ const Devices: FC<{}> = () => {
             oldData?: IDeviceData
           ): Promise<void> => {
             return new Promise(resolve => {
-              if (newData.active === oldData?.active) {
+              if (newData.active.toString() === oldData?.active.toString()) {
                 return resolve();
               }
               setDevicesUpdating(true);
@@ -123,6 +145,12 @@ const Devices: FC<{}> = () => {
         data={data ? data : []}
         icons={tableIcons}
         isLoading={devicesUpdating}
+        onColumnDragged={(
+          sourceIndex: number,
+          destinationIndex: number
+        ): void => {
+          handleOnColumnDragged(sourceIndex, destinationIndex);
+        }}
         options={{
           paging: false
         }}

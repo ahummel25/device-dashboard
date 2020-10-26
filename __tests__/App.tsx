@@ -3,7 +3,7 @@ import { act, render, RenderResult } from '@testing-library/react';
 import _fetchMock from 'isomorphic-fetch';
 
 import { BASE_API } from '../src/services/api';
-import deviceReadings from '../deviceReadings';
+import mockDeviceReadings from '../__mocks__/mockDeviceReadings';
 import App from '../src/App';
 
 type FetchMock = typeof import('fetch-mock');
@@ -17,7 +17,7 @@ describe('App.tsx', (): void => {
 
   beforeEach(
     async (): Promise<void> => {
-      fetchMock.mock(`${BASE_API}/devices`, { data: deviceReadings });
+      fetchMock.mock(`${BASE_API}/devices`, { data: mockDeviceReadings });
       await act(async () => {
         component = render(<App />);
       });
