@@ -15,7 +15,7 @@
 	"dependencies": {
 		"@material-ui/core": "^4.9.11",
 		"@material-ui/icons": "^4.9.1",
-		"@types/react-dom": "^16.9.6",
+		"@types/react-dom": "^17.0.0",
 		"@types/restify": "^8.4.2",
 		"@types/restify-cors-middleware": "^1.0.1",
 		"isomorphic-fetch": "^2.2.1",
