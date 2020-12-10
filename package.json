@@ -18,7 +18,7 @@
 		"@types/react-dom": "^16.9.6",
 		"@types/restify": "^8.4.2",
 		"@types/restify-cors-middleware": "^1.0.1",
-		"isomorphic-fetch": "^2.2.1",
+		"isomorphic-fetch": "^3.0.0",
 		"material-table": "^1.57.2",
 		"react": "^16.7.0",
 		"react-dom": "^16.7.0"
