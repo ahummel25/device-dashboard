@@ -58,7 +58,7 @@
 		"mini-css-extract-plugin": "^0.5.0",
 		"open": "0.0.5",
 		"path": "^0.12.7",
-		"react-hot-loader": "^4.12.20",
+		"react-hot-loader": "4.13.0",
 		"remove": "^0.1.5",
 		"restify": "^8.0.0",
 		"restify-cors-middleware": "^1.1.1",
